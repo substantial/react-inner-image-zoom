@@ -222,6 +222,7 @@ class InnerImageZoom extends Component {
       sizes,
       sources,
       zoomSrc,
+      zoomSrcSet,
       alt,
       fadeDuration,
       className
@@ -229,6 +230,7 @@ class InnerImageZoom extends Component {
 
     const zoomImageProps = {
       src: zoomSrc || src,
+      srcSet: zoomSrcSet || srcSet,
       fadeDuration: this.state.isFullscreen ? 0 : fadeDuration,
       top: this.state.top,
       left: this.state.left,
@@ -282,6 +284,7 @@ InnerImageZoom.propTypes = {
   sizes: PropTypes.string,
   sources: PropTypes.array,
   zoomSrc: PropTypes.string,
+  zoomSrcSet: PropTypes.string,
   alt: PropTypes.string,
   fadeDuration: PropTypes.number,
   fullscreenOnMobile: PropTypes.bool,

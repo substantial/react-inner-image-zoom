@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const ZoomImage = (props) => {
   const {
     src,
+    srcSet,
     fadeDuration,
     top,
     left,
@@ -23,6 +24,7 @@ const ZoomImage = (props) => {
           transition: `linear ${fadeDuration}ms opacity, linear ${fadeDuration}ms visibility`
         }}
         src={src}
+        srcSet={srcSet}
         onLoad={onLoad}
         onTouchStart={onTouchStart}
         alt=""
@@ -44,6 +46,7 @@ const ZoomImage = (props) => {
 
 ZoomImage.propTypes = {
   src: PropTypes.string,
+  srcSet: PropTypes.string,
   fadeDuration: PropTypes.number,
   top: PropTypes.number,
   left: PropTypes.number,
